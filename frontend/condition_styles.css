@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+header {
+    background-color: #D39BC0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/cond_bg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 60px); /* Adjust based on header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 20px;
+}
+.banner {
+    background-color: #FFD700;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.conditions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+}
+
+.condition {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0 10px; /* Adds some space between cards */
+}
+
+.condition img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.condition h2 {
+    margin: 10px 0;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.read {
+    background-color: #8B008B;
+    color: white;
+}
+
+.train {
+    background-color: #8B008B;
+    color: white;
+}
