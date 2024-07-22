@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS/PCOD Yoga Poses</title>
+    <link rel="stylesheet" href="pcos_styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/logo.jpeg" alt="Yoga Logo">
+            <span>YOGA</span>
+        </div>
+        <nav>
+            <a href="index.html" class="home">HOME</a> 
+            <a href="about.html" class="about">ABOUT</a>
+        </nav>
+    </header>
+    <main>
+        <h1>PCOS/PCOD</h1>
+        <div class="poses">
+            <div class="pose">
+                <span class="number">1</span>
+                <p>Garland Pose (Malasana)</p>
+                <a href="#" class="train-btn" onclick="showContent('p1.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">2</span>
+                <p>Bridge Pose (Setu Bandhasana)</p>
+                <a href="#" class="train-btn" onclick="showContent('p2.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">3</span>
+                <p>Bow Pose (Dhanurasana)</p>
+                <a href="#" class="train-btn" onclick="showContent('p3.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">4</span>
+                <p>Cat-Cow Pose (Chakravakasana)</p>
+                <a href="#" class="train-btn" onclick="showContent('p4.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">5</span>
+                <p>Head-to-Knee Pose (Janusirsana)</p>
+                <a href="#" class="train-btn" onclick="showContent('p5.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">6</span>
+                <p>Butterfly or Bound Angle Pose (Supta Baddhakonasana)</p>
+                <a href="#" class="train-btn" onclick="showContent('p6.html')">TRAIN</a>
+            </div>       
+
+
+          <!-- Pop-up Container -->
+          <div id="popup-overlay" class="overlay">
+            <div class="popup">
+                <button class="close-btn" onclick="hideContent()">X</button>
+                <iframe id="popup-iframe" src="./image/1.jpeg"></iframe>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function showContent(src) {
+        document.getElementById('popup-iframe').src = src;
+        document.getElementById('popup-overlay').style.display = 'flex';
+    }
+
+    function hideContent() {
+        document.getElementById('popup-overlay').style.display = 'none';
+    }
+</script>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            <!-- Pop-up Container -->
+           <!-- <div id="popup-overlay" class="overlay">
+             <div class="popup">
+               <button class="close-btn" onclick="hideContent()">X</button>
+               <iframe src="p1.html"></iframe>
+            </div>
+           </div>
+
+             <script>
+                  function showContent() {
+                  document.getElementById('popup-overlay').style.display = 'flex';
+              }
+
+                  function hideContent() {
+                  document.getElementById('popup-overlay').style.display = 'none';
+              }
+             </script> -->
+        </div>
+    </main>
+</body>
+</html>

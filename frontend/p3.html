@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterfly Pose</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+        .popup {
+            width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .popup-header {
+            background-color: #d7a0c2;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+        .popup-body {
+            padding: 20px;
+            text-align: center;
+        }
+        .popup-body img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .popup-body h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+        .timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .timer input {
+            width: 50px;
+            font-size: 24px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 5px;
+            -moz-appearance: textfield;
+        }
+        .timer input::-webkit-outer-spin-button,
+        .timer input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .start-button {
+            background-color: #6c4a7f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .start-button:hover {
+            background-color: #583b63;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <div class="popup-header">
+            <span>YOGA</span>
+        </div>
+        <div class="popup-body">
+            <h2>Bow Pose</h2>
+            <img src="./image/p3.png" alt="bow Pose Image">
+            <div class="timer">
+                <input type="number" min="0" max="59" value="00" id="minutes"> :
+                <input type="number" min="0" max="59" value="00" id="seconds">
+            </div>
+            <button class="start-button">START</button>
+        </div>
+    </div>
+</body>
+</html>
