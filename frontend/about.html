@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How is Yoga Beneficial?</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f9e79f, #f8c471, #d7bde2);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #5d4037;
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 40px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .benefit-card {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .image-box, .text-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .image-box {
+            flex: 0 0 250px;
+            margin-right: 20px;
+        }
+        .image-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .text-box {
+            flex: 1;
+            padding: 20px;
+        }
+        .text-box p {
+            margin: 0;
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.5;
+        }
+        .benefit-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .benefit-card:nth-child(even) .image-box {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            .benefit-card, .benefit-card:nth-child(even) {
+                flex-direction: column;
+            }
+            .image-box, .text-box {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+            .image-box {
+                flex: none;
+            }
+            .image-box img {
+                height: 220px;
+            }
+            .text-box p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HOW IS YOGA<br>BENEFICIAL?</h1>
+        <div class="benefit-card">
+            <div class="image-box">
+                <img src="image/1.jpeg" alt="Woman practicing yoga outdoors">
+            </div>
+            <div class="text-box">
+                <p>Yoga is beneficial for managing PCOS by reducing stress, improving hormonal balance, and enhancing overall well-being. It helps lower cortisol levels, which can alleviate anxiety and depression. Regular practice improves insulin sensitivity, aiding in weight management. Additionally, yoga promotes relaxation and mindfulness, contributing to better mental and physical health.</p>
+            </div>
+        </div>
+        <div class="benefit-card">
+            <div class="image-box">
+                <img src="image/2.jpeg" alt="Person in yoga pose on a mat">
+            </div>
+            <div class="text-box">
+                <p>Yoga is beneficial for managing anxiety by promoting relaxation, reducing stress, and improving mental clarity. Through specific poses and controlled breathing techniques, yoga helps activate the parasympathetic nervous system, which calms the body and mind. This practice also enhances mindfulness, leading to better emotional regulation and a more balanced mood.</p>
+            </div>
+        </div>
+        <div class="benefit-card">
+            <div class="image-box">
+                <img src="image/3.jpeg" alt="Man meditating indoors">
+            </div>
+            <div class="text-box">
+                <p>Yoga can help alleviate insomnia by promoting relaxation and reducing stress. Practicing yoga regularly can improve sleep quality by calming the nervous system and enhancing mental focus. Through gentle stretches and controlled breathing, yoga prepares the body and mind for restful sleep, making it easier to fall asleep and stay asleep.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
