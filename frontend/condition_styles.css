@@ -48,6 +48,7 @@ main {
     margin: 20px;
     display: inline-block;
     align-self: flex-start;
+    block-size: 30px;
 }
 
 h1 {
@@ -59,7 +60,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 400%;
     max-width: 1200px; /* Adjust as needed */
 }
 
