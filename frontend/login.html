@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form class="login-form">
+        <form id="loginForm" class="login-form">
             <h1>LOGIN</h1>
             <div class="form-group">
                 <label for="username">USERNAME</label>
@@ -18,8 +18,103 @@
                 <label for="password">PASSWORD</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <p class="signup-link">Don't have an account? <a href="#">Sign up !</a></p>
+            <button type="submit">Login</button>
+            <p class="signup-link">Don't have an account? <a href="#" id="showSignup">Sign up !</a></p>
+        </form>
+        <form id="signupForm" class="login-form" style="display: none;">
+            <h1>SIGN UP</h1>
+            <div class="form-group">
+                <label for="signupUsername">USERNAME</label>
+                <input type="text" id="signupUsername" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="signupPassword">PASSWORD</label>
+                <input type="password" id="signupPassword" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="signupEmail">EMAIL</label>
+                <input type="email" id="signupEmail" name="email" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p class="signup-link">Already have an account? <a href="#" id="showLogin">Login !</a></p>
         </form>
     </div>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+        const showSignup = document.getElementById('showSignup');
+        const showLogin = document.getElementById('showLogin');
+
+        showSignup.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        });
+
+        showLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    try {
+        const response = await fetch('http://localhost:8080/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert(data.message);
+            // Redirect to index.html after successful login
+            window.location.href = 'index.html';
+        } else {
+            alert(data.detail);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    }
+});
+
+        signupForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const username = document.getElementById('signupUsername').value;
+    const password = document.getElementById('signupPassword').value;
+    const email = document.getElementById('signupEmail').value;
+
+    try {
+        const response = await fetch('http://localhost:8080/signup', {
+            method: 'POST',  // Make sure this is POST
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password, email }),
+        });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert(data.message);
+                    signupForm.style.display = 'none';
+                    loginForm.style.display = 'block';
+                } else {
+                    alert(data.detail);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+    </script>
 </body>
 </html>
