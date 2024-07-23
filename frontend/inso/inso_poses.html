@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRESS/ANXIETY Yoga Poses</title>
+    <link rel="stylesheet" href="inso_styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../image/logo.jpeg" alt="Yoga Logo">
+            <span>YOGA</span>
+        </div>
+        <nav>
+            <a href="../index.html" class="home">HOME</a> 
+            <a href="../about.html" class="about">ABOUT</a>
+        </nav>
+    </header>
+    <main>
+        <h1>STRESS / ANXIETY</h1>
+        <div class="poses">
+            <div class="pose">
+                <span class="number">1</span>
+                <p>Big Toe Pose</p>
+                <a href="#" class="train-btn" onclick="showContent('i1.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">2</span>
+                <p>Bound Angle Pose</p>
+                <a href="#" class="train-btn" onclick="showContent('i2.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">3</span>
+                <p>Extended Puppy Pose</p>
+                <a href="#" class="train-btn" onclick="showContent('i3.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">4</span>
+                <p>Supine Twist</p>
+                <a href="#" class="train-btn" onclick="showContent('i4.html')">TRAIN</a>
+            </div>
+            <div class="pose">
+                <span class="number">5</span>
+                <p>Legs Up the Wall</p>
+                <a href="#" class="train-btn" onclick="showContent('i5.html')">TRAIN</a>
+            </div>
+            <!-- <div class="pose">
+                <span class="number">6</span>
+                <p>Butterfly or Bound Angle Pose (Supta Baddhakonasana)</p>
+                <a href="#" class="train-btn" onclick="showContent('p6.html')">TRAIN</a>
+            </div>        -->
+
+
+          <!-- Pop-up Container -->
+          <div id="popup-overlay" class="overlay">
+            <div class="popup">
+                <button class="close-btn" onclick="hideContent()">X</button>
+                <iframe id="popup-iframe" src="./image/1.jpeg"></iframe>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function showContent(src) {
+        document.getElementById('popup-iframe').src = src;
+        document.getElementById('popup-overlay').style.display = 'flex';
+    }
+
+    function hideContent() {
+        document.getElementById('popup-overlay').style.display = 'none';
+    }
+</script>
+       
+</body>
+</html>
